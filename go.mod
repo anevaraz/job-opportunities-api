@@ -1,4 +1,4 @@
-module github.com/anevaraz/go-jobs-api
+module github.com/anevaraz/job-opportunities-api
 
 go 1.20
 

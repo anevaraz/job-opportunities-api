@@ -3,7 +3,7 @@ package config
 import (
 	"os"
 
-	candidate "github.com/anevaraz/go-jobs-api/internal/schemas"
+	candidate "github.com/anevaraz/job-opportunities-api/internal/schemas"
 
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"

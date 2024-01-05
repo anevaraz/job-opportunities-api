@@ -1,7 +1,7 @@
 package handlers
 
 import (
-	"github.com/anevaraz/go-jobs-api/config"
+	"github.com/anevaraz/job-opportunities-api/config"
 	"gorm.io/gorm"
 )
 

@@ -1,7 +1,7 @@
 package routes
 
 import (
-	"github.com/anevaraz/go-jobs-api/internal/handlers"
+	"github.com/anevaraz/job-opportunities-api/internal/handlers"
 	"github.com/gin-gonic/gin"
 )
 

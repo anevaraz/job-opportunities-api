@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/anevaraz/go-jobs-api/config"
-	router "github.com/anevaraz/go-jobs-api/internal/routes"
+	"github.com/anevaraz/job-opportunities-api/config"
+	router "github.com/anevaraz/job-opportunities-api/internal/routes"
 )
 
 var (

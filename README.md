@@ -1,1 +1,1 @@
-### Golang Jobs API
+### Golang Jobs Opportunities API
