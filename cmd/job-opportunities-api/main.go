@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/anevaraz/job-opportunities-api/config"
 	router "github.com/anevaraz/job-opportunities-api/internal/routes"
+	config "github.com/anevaraz/job-opportunities-api/pkg"
 )
 
 var (
