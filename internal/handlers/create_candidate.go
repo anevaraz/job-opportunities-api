@@ -7,25 +7,23 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func Create(ctx *gin.Context) {
+func CreateCandidateHandler(ctx *gin.Context) {
 	request := CreateCandidate{}
 
 	ctx.BindJSON(&request)
 
-	if err := request.Validate(); err != nil {
+	if err := request.ValidateCandidate(); err != nil {
 		logger.Errorf("validation error: %v", err.Error())
 		sendError(ctx, http.StatusBadRequest, err.Error())
 		return
 	}
 
 	newCandidate := candidate.Candidate{
-		Name:        request.Name,
-		Document:    request.Document,
-		Email:       request.Email,
-		Description: request.Description,
-		Education:   request.Education,
-		Experience:  request.Experience,
-		Technology:  request.Technology,
+		Name:       request.Name,
+		Email:      request.Email,
+		Education:  request.Education,
+		Expertise:  request.Expertise,
+		Technology: request.Technology,
 	}
 
 	if err := db.Create(&newCandidate).Error; err != nil {

@@ -1,4 +1,4 @@
-package candidate
+package schemas
 
 import (
 	"gorm.io/gorm"
@@ -6,11 +6,10 @@ import (
 
 type Candidate struct {
 	gorm.Model
-	Name        string `json:"name"`
-	Document    string `json:"document"`
-	Email       string `json:"email"`
-	Description string `json:"description"`
-	Education   string `json:"education"`
-	Experience  string `json:"experience"`
-	Technology  string `json:"technology"`
+	Name        string         `json:"name"`
+	Email       string         `json:"email"`
+	Education   string         `json:"education"`
+	Expertise   string         `json:"expertise"`
+	Technology  string         `json:"technology"`
+	Opportunity []*Opportunity `gorm:"many2many:candidates_opportunities;"`
 }

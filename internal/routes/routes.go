@@ -11,7 +11,10 @@ func initializeRoutes(router *gin.Engine) {
 	basePath := "/api/v1"
 	v1 := router.Group(basePath)
 	{
-		v1.GET("/candidate", handlers.GetCandidate)
-		v1.POST("/candidate", handlers.Create)
+		v1.POST("/candidate", handlers.CreateCandidateHandler)
+		v1.GET("/candidate", handlers.GetCandidateHandler)
+		v1.POST("/opportunity", handlers.CreateOpportunityHandler)
+		v1.GET("/opportunity", handlers.GetOpportunityHandler)
+		v1.POST("/apply", handlers.ApplyOpportunityHandler)
 	}
 }

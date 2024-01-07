@@ -4,6 +4,7 @@ import (
 	"os"
 
 	candidate "github.com/anevaraz/job-opportunities-api/internal/schemas"
+	opportunity "github.com/anevaraz/job-opportunities-api/internal/schemas"
 
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
@@ -35,7 +36,7 @@ func InitializeSQLite() (*gorm.DB, error) {
 		return nil, err
 	}
 	// Migrate the Schema
-	err = db.AutoMigrate(&candidate.Candidate{})
+	err = db.AutoMigrate(&candidate.Candidate{}, &opportunity.Opportunity{})
 	if err != nil {
 		logger.Errorf("sqlite automigration error: %v", err)
 		return nil, err
